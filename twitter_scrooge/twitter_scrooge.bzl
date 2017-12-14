@@ -23,8 +23,8 @@ def twitter_scrooge():
 
   native.maven_jar(
     name = "scrooge_core",
-    artifact = scala_mvn_artifact("com.twitter:scrooge-core:4.18.0"),
-    sha1 = "8a10e4da9fd636a8225a5068aa0b57072142a30b",
+    artifact = scala_mvn_artifact("com.twitter:scrooge-core:4.20.0"),
+    sha1 = "797d92d94abb2899935ff918420da6852eb03762",
     server = "twitter_scrooge_maven_server",
   )
   native.bind(name = 'io_bazel_rules_scala/dependency/thrift/scrooge_core', actual = '@scrooge_core//jar')
@@ -32,8 +32,8 @@ def twitter_scrooge():
   #scrooge-generator related dependencies
   native.maven_jar(
     name = "scrooge_generator",
-    artifact = scala_mvn_artifact("com.twitter:scrooge-generator:4.18.0"),
-    sha1 = "d456f18b5c478b6356e2e09f4be4784cd4f05765",
+    artifact = scala_mvn_artifact("com.twitter:scrooge-generator:4.20.0"),
+    sha1 = "58b127abac829da3eba929c17a6acbb62b199b56",
     server = "twitter_scrooge_maven_server",
   )
   native.bind(name = 'io_bazel_rules_scala/dependency/thrift/scrooge_generator', actual = '@scrooge_generator//jar')
